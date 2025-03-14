@@ -34,8 +34,30 @@ int prov(int& num1)
 	return num1;
 }
 
+int prov(double& num1)
+{
+	while (true)
+	{
+		cin >> num1;
+		if (!cin)
+		{
+			cout << "Error. Enter the correct data type." << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			continue;
+		}
+		else break;
+	}
+	cout << "You entered: " << num1 << endl;
+	cout << " " << endl;
+	return num1;
+}
+
 int task1(double& x)
 {
+    cout << "Enter a real number x (No more than 15 characters after the dot)" << endl;
+    cout << " " << endl;
+    prov(x);
     return x;
 }
 
