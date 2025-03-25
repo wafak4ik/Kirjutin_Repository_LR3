@@ -113,30 +113,33 @@ int main()
     cout << "5 - find the fractional part of the geometric mean of the modules of these 3 numbers" << endl;
     prov(h);
 
-    switch(h)
+    while(true)
     {
-        case 0:
-            cout << "Shutting down the program. Goodbye!" << endl;
-			break;
-        case 1:
-            task1(x);
-            break;
-        case 2:
-            task2(y);
-            break;
-        case 3:
-            task3(z);
-            break;
-        case 4:
-            task4();
-            break;
-        case 5:
-            task5();
-            break;
-        default:
-            cout << "There are no options that need this button" << endl;
-            cout << " " << endl;
-            cin.clear();
-            break;
+        switch(h)
+        {
+            case 0:
+                cout << "Shutting down the program. Goodbye!" << endl;
+                break;
+            case 1:
+                task1(x);
+                break;
+            case 2:
+                task2(y);
+                break;
+            case 3:
+                task3(z);
+                break;
+            case 4:
+                task4();
+                break;
+            case 5:
+                task5();
+                break;
+            default:
+                cout << "There are no options that need this button" << endl;
+                cout << " " << endl;
+                cin.clear();
+                break;
+        }
     }
 }
