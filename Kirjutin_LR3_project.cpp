@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <cmath>
 
 using namespace std;
 
@@ -14,6 +15,8 @@ using namespace std;
 - enter a real number z
 - find the integer part of the sum of these 3 numbers
 - find the fractional part of the geometric mean of the modules of these 3 numbers */
+
+double x, y, z;
 
 int prov(int& num1)
 {
@@ -53,7 +56,7 @@ int prov(double& num1)
 	return num1;
 }
 
-int task1(double& x)
+double task1(double& x)
 {
     cout << "Enter a real number x (No more than 15 characters after the dot)" << endl;
     cout << " " << endl;
@@ -61,27 +64,43 @@ int task1(double& x)
     return x;
 }
 
-int task2(double& y)
+double task2(double& y)
 {
+    cout << "Enter a real number y (No more than 15 characters after the dot)" << endl;
+    cout << " " << endl;
+    prov(y);
     return y;
 }
 
-int task3(double& z)
+double task3(double& z)
 {
+    cout << "Enter a real number z (No more than 15 characters after the dot)" << endl;
+    cout << " " << endl;
+    prov(z);
     return z;
 }
 
-void task4()
+int task4()
 {
-    
+    int sum = floor(x + y + z);
+    return sum; 
 }
 
-void task5()
+double task5()
 {
-    
+    double moduleX = fabs(x);
+    double moduleY = fabs(y);
+    double moduleZ = fabs(z);
+
+    double proizv = moduleX * moduleY * moduleZ;
+    double geometricMean = pow(proizv, 1.0 / 3.0);
+
+    double drob = geometricMean - floor(geometricMean);
+
+    return drob;
 }
 
-void main() 
+int main() 
 {
     int h;
     double x, y, z;
