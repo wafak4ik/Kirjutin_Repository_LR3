@@ -140,5 +140,3 @@ int main()
         }
     }
 }
-
-int gg;
